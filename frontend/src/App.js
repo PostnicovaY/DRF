@@ -31,8 +31,8 @@ class App extends React.Component {
         return (
             <div>
                 <MenuList/>
-                <hr align={'left'} width="30%"/>
                 <UserList users={this.state.users}/>
+                <br/>
                 <hr align={'left'} width="100%"/>
                 <FooterList/>
             </div>);

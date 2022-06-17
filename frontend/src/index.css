@@ -5,9 +5,75 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+    background-color: c;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+
+body {
+    margin: 0;
+    font-family: 'segoe ui', serif;
+  }
+.menu {
+    height: 50px;
+    width: 100%;
+    background-color: #6678b1;
+    position: relative;
+}
+
+.menu li {
+    float: left;
+}
+.menu {
+    list-style-type: none;
+}
+.menu a {
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: 700;
+    text-align: right;
+    text-decoration: none;
+    padding: 10px 10px;
+    position: relative;
+}
+.menu a:hover{
+    color: black;
+}
+ul.menu {
+    display: block;
+    float: none;
+    color: #555;
+}
+
+.fa-user{
+    font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif, serif;
+  font-size: 14px;
+  background: white;
+  max-width: 70%;
+  width: 70%;
+  border-collapse: collapse;
+  text-align: left;
+}
+.fa-user th {
+  font-weight: normal;
+  color: #039;
+  padding: 10px 8px;
+}
+.fa-user td {
+    border: 2px solid #6678b1;
+  color: #669;
+  padding: 9px 8px;
+  /*-webkit-transition: width 2s, height 1s, background-color 2s, -webkit-transform 1s;*/
+    transition: background-color 0.5s, transform 1s;
+}
+.fa-user td:hover{
+background-color: #7bffc4;
+
+}
+* {
+    box-sizing: border-box;
+  }

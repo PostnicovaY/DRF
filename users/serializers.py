@@ -1,8 +1,11 @@
-from rest_framework.serializers import HyperlinkedModelSerializer
-from .models import CustomUser
+from dataclasses import field
+
+from rest_framework.serializers import ModelSerializer
+
+from .models import Users
 
 
-class UsersModelSerializer(HyperlinkedModelSerializer):
+class UsersModelSerializer(ModelSerializer):
     class Meta:
-        model = CustomUser
-        fields = '__all__'
+        model = Users
+        fields = ("first_name", "last_name", "username", "email")

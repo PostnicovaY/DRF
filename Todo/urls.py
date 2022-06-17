@@ -1,5 +1,4 @@
 """Todo URL Configuration
-
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/3.2/topics/http/urls/
 Examples:
@@ -14,11 +13,19 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.db import router
-from django.urls import path, include
+from django.urls import include, path
+from rest_framework.routers import DefaultRouter
+
+from todo_list.views import ProjectModelViewSet, TODOModelViewSet
+from users.views import UsersModelViewSet
+
+route = DefaultRouter()
+route.register("users", UsersModelViewSet)
+route.register("project", ProjectModelViewSet)
+route.register("todo", TODOModelViewSet)
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('api-auth/', include('rest_framework.urls')),
-    path('api/', include(router.urls)),
+    path("admin/", admin.site.urls),
+    path("api-auth/", include("rest_framework.urls")),
+    path("api/", include(route.urls)),
 ]
