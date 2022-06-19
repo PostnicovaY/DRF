@@ -24,7 +24,7 @@ SECRET_KEY = (
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["*"]
 
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:3000",
@@ -48,16 +48,16 @@ INSTALLED_APPS = [
 ]
 
 REST_FRAMEWORK = {
-    "DEFAULT_RENDERER_CLASSES": (
-        "djangorestframework_camel_case.render.CamelCaseJSONRenderer",
-        "djangorestframework_camel_case.render.CamelCaseBrowsableAPIRenderer",
-    ),
+    # "DEFAULT_RENDERER_CLASSES": (
+    #     "djangorestframework_camel_case.render.CamelCaseJSONRenderer",
+    #     "djangorestframework_camel_case.render.CamelCaseBrowsableAPIRenderer",
+    # ),
     "DEFAULT_PAGINATION_CLASS": "rest_framework.pagination.LimitOffsetPagination",
-    "DEFAULT_PARSER_CLASSES": (
-        "djangorestframework_camel_case.parser.CamelCaseFormParser",
-        "djangorestframework_camel_case.parser.CamelCaseMultiPartParser",
-        "djangorestframework_camel_case.parser.CamelCaseJSONParser",
-    ),
+    # "DEFAULT_PARSER_CLASSES": (
+    #     "djangorestframework_camel_case.parser.CamelCaseFormParser",
+    #     "djangorestframework_camel_case.parser.CamelCaseMultiPartParser",
+    #     "djangorestframework_camel_case.parser.CamelCaseJSONParser",
+    # ),
     "DEFAULT_FILTER_BACKENDS": [
         "django_filters.rest_framework.DjangoFilterBackend"
     ],
