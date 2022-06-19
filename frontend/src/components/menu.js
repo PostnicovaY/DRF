@@ -1,20 +1,22 @@
 import React from "react";
+import { BrowserRouter, Route, Link, Switch, Redirect } from 'react-router-dom'
+import ProjectList from "./project";
 
-const MenuList = ({}) => {
+const MenuList = ({ }) => {
     return (
         <header>
             <ul className="menu">
                 <li>
-                    <a href="#">Все пользователи</a>
+                    <Link to='/'>Все пользователи</Link>
                 </li>
                 <li>
-                    <a href="#">Проекты</a>
+                    <Link to='/projects'>Проекты</Link>
                 </li>
                 <li>
-                    <a href="#">TODO</a>
+                    <Link to='/todo'>TODO</Link>
                 </li>
             </ul>
-        </header>
+        </header >
     )
 }
 export default MenuList
