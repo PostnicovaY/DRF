@@ -1,4 +1,4 @@
-from rest_framework import status
+from rest_framework import filters, status
 from rest_framework.pagination import LimitOffsetPagination
 from rest_framework.renderers import JSONRenderer
 from rest_framework.response import Response
@@ -22,6 +22,7 @@ class ProjectModelViewSet(ModelViewSet):
     serializer_class = ProjectModelSerializer
     pagination_class = ProjectLimitOffsetPagination
     filterset_class = ProjectFilter
+    search_fields = ["name"]
 
 
 class TODOModelViewSet(ModelViewSet):

@@ -63,6 +63,8 @@ REST_FRAMEWORK = {
         "rest_framework.authentication.BasicAuthentication",
         "rest_framework.authentication.SessionAuthentication",
     ],
+    "DATE_INPUT_FORMATS": ["%d-%m-%Y"],
+    "DATETIME_FORMAT": "%Y-%m-%d %H:%M",
     "PAGE_SIZE": 100,
 }
 
@@ -152,5 +154,6 @@ STATIC_URL = "/static/"
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
+
 
 GRAPHENE = {"SCHEMA": "Todo.schema.schema"}
